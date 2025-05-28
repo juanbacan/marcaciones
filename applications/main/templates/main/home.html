@@ -1,0 +1,40 @@
+{% extends 'layout/base.html' %}
+{% load core_extras %}
+{% load static %}
+
+{% block content %}
+
+<div class="bg-background">
+    <div class="container-lg py-5">
+        <div class="row" style="max-width: 800px; margin: auto;">
+            <form id="mainForm" class="form" method="POST" action="{{ request.path }}">
+                {% csrf_token %}
+                {% include 'core/forms/formRender.html' %}
+                <div class="card bg-light mt-4">
+                    <div class="card-body">
+                        <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+                            <div class="d-grid d-md-flex gap-2">
+                                <input type="submit" class="btn btn-sm btn-primary" value="Procesar" name="_save" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block extrajs %}
+
+{% endblock %}
+
+{% block extracss %}
+    <style>
+        .divisor {
+            border-top: 4px solid;
+            color: #0d6efd;
+        }
+    </style>
+{% endblock %}
