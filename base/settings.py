@@ -155,11 +155,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
-
-LANGUAGE_CODE = 'pt-br'
-TIME_ZONE = 'America/Sao_Paulo'  # Zona horaria de Brasil (ajusta según tu necesidad)
+LANGUAGE_CODE = 'es-ec'
+TIME_ZONE = 'America/Guayaquil'
 USE_I18N = True
-USE_L10N = True  # Habilita la localización
 USE_TZ = True
 
 LOCALE_PATHS = [
@@ -195,6 +193,7 @@ SITE_ID = 1
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'example@gmail.com'
 # EMAIL_HOST_PASSWORD = 'example'
